@@ -109,6 +109,14 @@ export class GuiModel {
                     "title": "Activity",
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
+                    ]
+                },
+
+                {
+                    "id": "ActivityForm",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
                         {
                             "id":   "activity",
                             "type": "autocomplete",
@@ -152,8 +160,10 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         }
+
                     ]
-                },
+                },        
+                
                 {
                     "id": "GroupForm",
                     "title": "Group",
