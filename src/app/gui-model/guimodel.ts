@@ -91,6 +91,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -135,6 +143,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id":   "location",
+                            "type": "autocomplete",
+                            "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2
+                        },
+                        {
                             "id": "date",
                             "type": "date",
                             "name": "Date",
@@ -175,6 +191,20 @@ export class GuiModel {
                     "name": "GroupName",
                     "width": 2,
                     "required": true
+                    },
+                    {
+                        "id": "date",
+                        "type": "date",
+                        "name": "CreationDate",
+                        "width": 2
+                    },
+                    {
+                        "id": "comment",
+                        "type": "text",
+                        "name": "Comments",
+                        "width": 2,
+                        "height": 4,
+                        "maxLength": 5000,
                     },
                     {
                     "type": "deleteButton",
