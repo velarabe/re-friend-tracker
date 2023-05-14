@@ -116,7 +116,30 @@ export class GuiModel {
                     "id": "AddActivityForm",
                     "title": "Activity",
                     "url": "/friend/:friendKey/activity",
-                    "formFieldList": [
+                    "formFieldList": [  
+
+                        {
+                            "id":   "activity",
+                            "type": "autocomplete",
+                            "name": "Activity",
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "readonly": true,
+                            "form": "ActivityForm",
+                            "width": 2
+                        },
+                            {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                            },
+                            {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                            },
+                            {
+                            "type": "okButton",
+                            "name": "Ok"
+                            }
                     ]
                 },
 
@@ -278,9 +301,8 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "form": {
-                                "form": "FriendForm"
-                            }
+                            
+                            "page": "friendsactivitiespage",
                         },
                     ]
                 },
@@ -351,6 +373,42 @@ export class GuiModel {
                     "color": "green",
                     "form": {
                     "form": "ActivityForm"
+                    }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-weixin",
+                        "color": "wisteria",
+                        "search": true,
+                        "url": "/activity",
+                        "form": {
+                        "form": "ActivityForm"
+                        }
+                        },
+                    ]
+                },{
+                    "id": "friendsactivitiespage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": "EditFriend",
+                    "icon": "fa-weixin",
+                    "color": "green",
+       
+                    "form": {
+                    "form": "FriendForm"
+                    }
+                    },
+					{
+                    "type": "newButton",
+                    "name": "AddActivity",
+                    "icon": "fa-weixin",
+                    "color": "green",
+                    "form": {
+                    "form": "AddActivityForm"
                     }
                     },
                     {
